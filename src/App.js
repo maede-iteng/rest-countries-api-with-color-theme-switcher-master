@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext, useState} from 'react';
+import {BrowserRouter as Router , Route , Routes} from "react-router-dom";
+import classes from './styles/main.module.css';
+import TopBar from "./component/topBar/TopBar";
+import CountriesContext from "./store/countries-context";
+import CountryDetails from "./component/countries/CountryDetails";
 
 function App() {
+    const ctx = useContext(CountriesContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+        <section className={ctx.darkMode ? `${classes.lightMode}` : `${classes.darkMode}`}>
+            <header className={ctx.darkMode ? `${classes.header} ${classes.container}` :`${classes.darkModeHeader}  ${classes.container}`}>
+                <h2>Where in the world?</h2>
+                    <button className={classes.button} onClick={ctx.changeTheme}>
+                        <ion-icon name="moon-outline" ></ion-icon>
+                        Dark Mode
+                    </button>
+            </header>
+            <Router>
+                <Routes>
+                    <Route path="/" exact element={ <TopBar />}></Route>
+                    <Route path="/countriesDetails/:name" element={<CountryDetails/>}></Route>
+                </Routes>
+            </Router>
+        </section>
+    </React.Fragment>
   );
 }
 

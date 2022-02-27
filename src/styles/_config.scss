@@ -1,0 +1,50 @@
+$darkMode-backgroundColor: hsl(207, 26%, 17%);
+$darkMode-elementColor: hsl(209, 23%, 22%);
+$darkMode-textColor:hsl(0, 0%, 100%);
+$lightMode-textColor: hsl(200, 15%, 8%);
+$lightMode-inputColor: hsl(0, 0%, 52%);
+$lightMode-backgroundColor:hsl(0, 0%, 98%);
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+body{
+  min-height:100vh;
+}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+@mixin transition-ease($transition) {
+  transition: $transition;
+}
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin media-md {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

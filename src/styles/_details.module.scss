@@ -1,0 +1,79 @@
+@import "config";
+
+.lightModeBtn{
+  background-color: $darkMode-elementColor;
+  color:$darkMode-textColor;
+  padding:1rem 2rem;
+  border:none;
+  margin:4rem 0;
+  cursor: pointer;
+  @include rounded(3px);
+  @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+  ion-icon{
+    margin-right:.5rem;
+    width:20px;
+  }
+}
+.darkModeBtn{
+    background-color: $lightMode-backgroundColor;
+    color:$lightMode-textColor;
+    padding:1rem 2rem;
+    border:none;
+    margin:4rem 0;
+    cursor: pointer;
+    @include rounded(3px);
+    @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+    ion-icon{
+      margin-right:.5rem;
+      width:20px;
+  }
+}
+.details{
+  display: flex;
+  gap:6rem;
+  .imgContainer{
+    width:450px;
+    img{
+      width:100%;
+      max-width:100%;
+    }
+  }
+  .info{
+    flex:1;
+     h1{
+      font-size:24px;
+    }
+    .descriptionSection{
+      display: flex;
+      margin-top:1rem;
+      gap:8rem;
+      line-height: 2rem;
+      p{
+        font-weight:600;
+        span{
+          color:#bbbbbb;
+        }
+      }
+    }
+    .borderCountries{
+      margin-top:2rem;
+      ul{
+        display: inline-block;
+        li{
+          list-style: none;
+          color:#bbbbbb;
+          padding: .3rem 2rem;
+          margin:.5rem;
+          background-color: $darkMode-elementColor;
+          @include rounded(3px);
+          @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+        }
+      }
+    }
+
+
+  }
+
+}
+
+

@@ -1,0 +1,65 @@
+@import "config";
+
+.card{
+  width:290px;
+  height:400px;
+  margin: 3rem 0;
+  @include rounded(5px);
+  @include box-shadow(1px 1px 15px rgba(59, 59, 59, 0.2));
+  @include transition-ease(transform .2s ease-in);
+  &:hover{
+    transform:scale(1.02);
+  }
+  img{
+    width:100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .description{
+    padding: 1rem;
+  }
+  .name{
+    margin-bottom:1rem;
+  }
+  .row{
+    display: flex;
+    margin-top: .2rem;
+
+    p:first-child{
+      font-weight: 600;
+    }
+  }
+}
+.darkModeCard{
+  background-color: $darkMode-elementColor;
+  width:290px;
+  height:400px;
+  margin: 3rem 0;
+  @include rounded(5px);
+  @include box-shadow(1px 1px 15px rgba(0, 0, 0, .3));
+  @include transition-ease(transform .2s ease-in);
+  &:hover{
+    transform:scale(1.02);
+  }
+  img{
+    width:100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .description{
+    padding: 1rem;
+  }
+  .name{
+    margin-bottom:1rem;
+  }
+  .row{
+    display: flex;
+    margin-top: .2rem;
+
+    p:first-child{
+      font-weight: 600;
+    }
+  }
+}

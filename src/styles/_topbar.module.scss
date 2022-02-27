@@ -1,0 +1,94 @@
+@import "config";
+.topBar{
+  margin-top:2rem;
+  .wrapper{
+    @media screen and (min-width: 670px) {
+      display:flex;
+    }
+  }
+  .searchWrapper{
+    flex: 1;
+    position: relative;
+    .searchInput{
+      width:400px;
+      padding:1rem 2.8rem;
+      border:none;
+      @include rounded(3px);
+      background-color: $darkMode-textColor;
+      @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+      color:$lightMode-inputColor;
+      &:focus{
+        outline: none;
+      }
+    }
+    ion-icon{
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translate(50% , -50%);
+      color:$lightMode-inputColor
+    }
+  }
+  .selectInput{
+    padding: 1rem 1.5rem;
+    border:none;
+    font-weight: 600;
+    margin:1rem 0;
+    @include rounded(3px);
+    @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+    @media screen and (min-width: 670px) {
+     margin:0;
+    }
+    option{
+      border:none;
+      padding:1rem;
+    }
+  }
+  .darkModeSearchWrapper{
+    flex: 1;
+    position: relative;
+    .searchInput{
+      width:400px;
+      padding:1rem 2.8rem;
+      border:none;
+      @include rounded(3px);
+      background-color: $darkMode-elementColor;
+      @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+      color:$darkMode-textColor;
+
+      &:focus{
+        outline: none;
+      }
+      &::placeholder{
+        color:$darkMode-textColor;
+      }
+    }
+    ion-icon{
+      position: absolute;
+      left: 8px;
+      top: 50%;
+      transform: translate(50% , -50%);
+      color:$darkMode-textColor;
+    }
+  }
+  .darkModeSelectInput{
+    background-color: $darkMode-elementColor;
+    color:$darkMode-textColor;
+    padding: 1rem 1.5rem;
+    border:none;
+    font-weight: 600;
+    margin:1rem 0;
+    @include rounded(3px);
+    @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+    @media screen and (min-width: 670px) {
+      margin:0;
+    }
+
+    option{
+      border:none;
+      padding:1rem;
+    }
+  }
+
+
+}

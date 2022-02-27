@@ -1,0 +1,69 @@
+@import "config";
+@import "topbar.module";
+@import "card.module";
+@import "countriesCards.module";
+@import "loadingIndicator.module";
+@import "details.module";
+
+.lightMode{
+  background-color: $lightMode-backgroundColor;
+  color:$lightMode-textColor;
+  min-height: 100vh;
+}
+.darkMode{
+  background-color: $darkMode-backgroundColor;
+  color:$darkMode-textColor;
+  min-height: 100vh;
+}
+.container{
+  width: 100%;
+  padding-right:3rem;
+  padding-left: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.header {
+  background-color: $darkMode-textColor;
+  color:$lightMode-textColor;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+
+  .button {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    ion-icon{
+      margin-right: .5rem;
+    }
+  }
+}
+.darkModeHeader {
+  background-color: $darkMode-elementColor;
+  color:$darkMode-textColor;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  @include box-shadow(1px 1px 5px rgba(0, 0, 0, .1));
+
+  .button {
+    background-color: transparent;
+    color:$darkMode-textColor;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    ion-icon{
+      margin-right: .5rem;
+    }
+  }
+}
